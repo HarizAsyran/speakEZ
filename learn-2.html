@@ -23,11 +23,11 @@
       <h2>Daily Activities</h2>
       <p>I wake up at 7 AM<audio id="wakeup" src="audio/wakeup.mp3"></audio>
         <button onclick="playAudio('wakeup')">🔊</button></p>
-      <p>I brush my teeth<button onclick="playAudio('brush')">🔊</button></p>
-      <p>I eat breakfast<button onclick="playAudio('eatbreakfast')">🔊</button></p>
-      <p>I go to school / work<button onclick="playAudio('school')">🔊</button></p>
-      <p>I play in the evening<button onclick="playAudio('playevening')">🔊</button></p>
-      <p>I sleep at 10 PM<button onclick="playAudio('sleep10pm')">🔊</button></p>
+      <p>I brush my teeth<audio id="brush" src="brush.mp3"></audio><button onclick="playAudio('brush')">🔊</button></p>
+      <p>I eat breakfast<audio id="eatbreakfast" src="eatbreakfast.mp3"></audio><button onclick="playAudio('eatbreakfast')">🔊</button></p>
+      <p>I go to school / work<audio id="school" src="school.mp3"></audio><button onclick="playAudio('school')">🔊</button></p>
+      <p>I play in the evening<audio id="playevening" src="playevening.mp3"></audio><button onclick="playAudio('playevening')">🔊</button></p>
+      <p>I sleep at 10 PM<audio id="sleep10pm" src="sleep10pm.mp3"></audio><button onclick="playAudio('sleep10pm')">🔊</button></p>
     </section>
 
   
@@ -38,12 +38,12 @@
   </footer>
 
   <!-- Audio Files -->
-  <audio id="wakeup" src="audio/wakeup.mp3"></audio>
-  <audio id="brush" src="audio/brush.mp3"></audio>
-  <audio id="eatbreakfast" src="audio/eatbreakfast.mp3"></audio>
-  <audio id="school" src="audio/school.mp3"></audio>
-  <audio id="playevening" src="audio/playevening.mp3"></audio>
-  <audio id="sleep10pm" src="audio/sleep10pm.mp3"></audio>
+  <audio id="wakeup" src="wakeup.mp3"></audio>
+  <audio id="brush" src="brush.mp3"></audio>
+  <audio id="eatbreakfast" src="eatbreakfast.mp3"></audio>
+  <audio id="school" src="school.mp3"></audio>
+  <audio id="playevening" src="playevening.mp3"></audio>
+  <audio id="sleep10pm" src="sleep10pm.mp3"></audio>
 
   <script>
     function playAudio(id) {
