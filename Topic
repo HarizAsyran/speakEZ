@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpeakEZ - Topic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="fade-in">Welcome to SpeakEZ!</h1>
+    <h2 class="slide-up">Fun, Easy, and for All Ages!</h2>
+    <p class="fade-in-delayed">Start your English learning journey today with SpeakEZ!</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Feature Sections -->
+  <section class="features">
+    <!-- Row 1 -->
+    <div class="feature-card">
+      <img src="1280x720.jpg" alt="Lessons" />
+      <h3>Beginner Lessons</h3>
+      <p>Simple, bite-sized lessons to get you started with English.</p>
+    </div>
+    <div class="feature-card">
+      <img src="1280x720.jpg" alt="Quiz" />
+      <h3>Fun Quizzes</h3>
+      <p>Test your skills and see your progress with interactive quizzes.</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="feature-card">
+      <img src="1280x720.jpg" alt="Video" />
+      <h3>Learning Videos</h3>
+      <p>Watch and learn with visual content made for beginners.</p>
+    </div>
+    <div class="feature-card">
+      <img src="1280x720.jpg" alt="Conversations" />
+      <h3>About Us</h3>
+      <p>We're passionate about helping people grow through effective communication and innovative technology</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Learn English Online - SpeakEZ</p>
+  </footer>
+
+</body>
+</html>

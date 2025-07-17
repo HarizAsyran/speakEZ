@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakEZ - Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Basic English Conversations</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Greetings</h2>
+      <p>Hello!
+        <audio id="hello" src="audio/hello.mp3"></audio>
+        <button onclick="playAudio('hello')">🔊</button></p>
+      <p>Hi!<button onclick="playAudio('hi')">🔊</button></p>
+      <p>Good morning! <button onclick="playAudio('goodmorning')">🔊</button></p>
+    </section>
+
+    <section>
+      <h2>2. Introducing Yourself</h2>
+      <p>"My name is John." <button onclick="playAudio('myname')">🔊</button></p>
+      <p>"I am from Canada." <button onclick="playAudio('iamfrom')">🔊</button></p>
+    </section>
+
+    <section>
+      <h2>3. Asking Someone's Name</h2>
+      <p>"What's your name?" <button onclick="playAudio('whatsyourname')">🔊</button></p>
+    </section>
+
+    <section>
+      <h2>4. Asking How Someone Is</h2>
+      <p>"How are you?" <button onclick="playAudio('howareyou')">🔊</button></p>
+      <p>"I'm fine, thank you!" <button onclick="playAudio('imfine')">🔊</button></p>
+    </section>
+
+    <section>
+      <h2>5. Saying Goodbye</h2>
+      <p>Goodbye!<button onclick="playAudio('goodbye')">🔊</button></p>
+      <p>See you later!<button onclick="playAudio('seeyoulater')">🔊</button></p>
+      <p>Have a nice day!<button onclick="playAudio('haveaniceday')">🔊</button></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn English Online</p>
+  </footer>
+
+  <!-- Audio Files -->
+  <audio id="hello" src="audio/hello.mp3"></audio>
+  <audio id="hi" src="audio/hi.mp3"></audio>
+  <audio id="goodmorning" src="audio/goodmorning.mp3"></audio>
+  <audio id="myname" src="audio/myname.mp3"></audio>
+  <audio id="iamfrom" src="audio/iamfrom.mp3"></audio>
+  <audio id="whatsyourname" src="audio/whatsyourname.mp3"></audio>
+  <audio id="howareyou" src="audio/howareyou.mp3"></audio>
+  <audio id="imfine" src="audio/imfine.mp3"></audio>
+  <audio id="goodbye" src="audio/goodbye.mp3"></audio>
+  <audio id="seeyoulater" src="audio/seeyoulater.mp3"></audio>
+  <audio id="haveaniceday" src="audio/haveaniceday.mp3"></audio>
+
+  <script>
+    function playAudio(id) {
+      document.getElementById(id).play();
+    }
+  </script>
+</body>
+</html>

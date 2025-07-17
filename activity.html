@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpeakEZ - Activity</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .activity-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .activity-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .activity-buttons {
+      display: flex;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .activity-button {
+      padding: 20px 40px;
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .activity-button:hover {
+      background-color: #388E3C;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="fade-in">Activity</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="topic.html">Learn</a>
+      <a href="activity.html">Activity</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="activity-container">
+      <h2 class="activity-title">Choose What You Want to Do!</h2>
+      <div class="activity-buttons">
+        <a href="question.html" class="activity-button">🧠 Take a Quiz</a>
+        <a href="game.html" class="activity-button">🎮 Play a Game</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn English Online - SpeakEZ</p>
+  </footer>
+
+</body>
+</html>

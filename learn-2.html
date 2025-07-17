@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakEZ - Daily Activities</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Basic English Conversations</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="topic.html">Learn</a>
+      <a href="activity.html">Activity</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <h2 class="page-subtitle">My Daily Routine</h2>
+  <main>
+    <section>
+      <h2>Daily Activities</h2>
+      <p>I wake up at 7 AM<audio id="wakeup" src="audio/wakeup.mp3"></audio>
+        <button onclick="playAudio('wakeup')">🔊</button></p>
+      <p>I brush my teeth<button onclick="playAudio('brush')">🔊</button></p>
+      <p>I eat breakfast<button onclick="playAudio('eatbreakfast')">🔊</button></p>
+      <p>I go to school / work<button onclick="playAudio('school')">🔊</button></p>
+      <p>I play in the evening<button onclick="playAudio('playevening')">🔊</button></p>
+      <p>I sleep at 10 PM<button onclick="playAudio('sleep10pm')">🔊</button></p>
+    </section>
+
+  
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn English Online</p>
+  </footer>
+
+  <!-- Audio Files -->
+  <audio id="wakeup" src="audio/wakeup.mp3"></audio>
+  <audio id="brush" src="audio/brush.mp3"></audio>
+  <audio id="eatbreakfast" src="audio/eatbreakfast.mp3"></audio>
+  <audio id="school" src="audio/school.mp3"></audio>
+  <audio id="playevening" src="audio/playevening.mp3"></audio>
+  <audio id="sleep10pm" src="audio/sleep10pm.mp3"></audio>
+
+  <script>
+    function playAudio(id) {
+      document.getElementById(id).play();
+    }
+  </script>
+</body>
+</html>

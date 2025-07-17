@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scramble Game - Learn English Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="scramble-style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Scramble Game</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="topic.html">Learn</a>
+      <a href="activity.html">Activity</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="game-container">
+      <h1 class="game-title">🎮 Sentence Scramble Challenge</h1>
+      <p class="game-instruction">Click the words in the correct order to build the sentence!</p>
+      <p id="scoreboard" class="game-score"></p>
+
+      <div id="scrambled" class="word-bank"></div>
+
+      <h3>Your Sentence:</h3>
+      <div id="constructed" class="constructed-sentence"></div>
+
+      <div class="game-buttons">
+        <button onclick="checkAnswer()">✅ Submit</button>
+        <button onclick="resetGame()">🔄 New Sentence</button>
+      </div>
+
+      <p id="result" class="result-message"></p>
+    </div>
+  </main>
+
+  <!-- Sound Effects -->
+  <audio id="correctSound" src="Ding.mp3" preload="auto"></Audio>
+  <audio id="wrongSound" src="Error.mp3" preload="auto"></Audio>
+
+  <script>
+    const sentences = [
+      "I am learning English",
+      "She goes to school every day",
+      "We love to play games",
+      "This is a scrambled sentence",
+      "Practice makes perfect",
+      "He reads a book every night",
+      "They are watching a movie",
+      "We live in a small town",
+      "Do you like chocolate cake",
+      "The cat is sleeping on the couch"
+    ];
+
+    let originalSentence = "";
+    let selectedWords = [];
+    let score = 0;
+    let currentIndex = 0;
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function setupGame() {
+      if (currentIndex >= sentences.length) {
+        document.getElementById("scrambled").innerHTML = "";
+        document.getElementById("constructed").innerHTML = "";
+        document.getElementById("result").innerHTML = `🎉 Game Over! Your final score: ${score} / ${sentences.length}`;
+        document.querySelector(".game-buttons").style.display = "none";
+        return;
+      }
+
+      document.querySelector(".game-buttons").style.display = "block";
+      selectedWords = [];
+      originalSentence = sentences[currentIndex];
+      const words = originalSentence.split(" ");
+      const scrambledWords = shuffle([...words]);
+
+      const scrambledContainer = document.getElementById("scrambled");
+      const constructedContainer = document.getElementById("constructed");
+
+      scrambledContainer.innerHTML = "";
+      constructedContainer.innerHTML = "";
+      document.getElementById("result").textContent = "";
+
+      scrambledWords.forEach((word, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = word;
+        btn.className = "word-button";
+        btn.onclick = () => {
+          selectedWords.push(word);
+          btn.disabled = true;
+          constructedContainer.textContent = selectedWords.join(" ");
+        };
+        scrambledContainer.appendChild(btn);
+      });
+
+      updateProgress();
+    }
+
+    function checkAnswer() {
+      const result = document.getElementById("result");
+      const userSentence = selectedWords.join(" ");
+
+      if (userSentence === originalSentence) {
+        result.textContent = "✅ Correct!";
+        result.style.color = "#2e7d32";
+        playSound('correct');
+        score++;
+      } else {
+        result.textContent = "❌ Incorrect. Try the next one!";
+        result.style.color = "#c62828";
+        playSound('wrong');
+      }
+
+      currentIndex++;
+      setTimeout(setupGame, 1500);
+    }
+
+    function updateProgress() {
+      document.getElementById("scoreboard").innerHTML =
+        `Score: ${score} / ${sentences.length} | Sentence ${currentIndex + 1} of ${sentences.length}`;
+    }
+
+    function resetGame() {
+      currentIndex = 0;
+      score = 0;
+      setupGame();
+    }
+
+    function playSound(type) {
+      if (type === 'correct') {
+        document.getElementById("correctSound").play();
+      } else if (type === 'wrong') {
+        document.getElementById("wrongSound").play();
+      }
+    }
+
+    setupGame();
+  </script>
+</body>
+</html>

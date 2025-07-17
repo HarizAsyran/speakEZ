@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakEZ - Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Basic English Conversations</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="topic.html">Learn</a>
+      <a href="activity.html">Activity</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <h2 class="page-subtitle">Shopping Conversations</h2>
+
+  <main>
+    <section>
+      <h2>Conversations With Waiter</h2>
+      <p>How much is this?
+        <audio id="howmuch" src="audio/howmuch.mp3"></audio>
+        <button onclick="playAudio('howmuch')">🔊</button></p>
+      <p>I want to buy a shirt<button onclick="playAudio('iwanttobuyashirt')">🔊</button></p>
+      <p>Do you have this in size M?<button onclick="playAudio('doyouhavethis')">🔊</button></p>
+      <p>Can I try this on?<button onclick="playAudio('canitrythison')">🔊</button></p>
+      <p>Thank you<button onclick="playAudio('thankyou')">🔊</button></p>
+      <p>You are welcome<button onclick="playAudio('youreWelcome')">🔊</button></p>
+
+    </section>
+
+    <section>
+      <h2>Payment</h2>
+      <p>I will pay by cash<button onclick="playAudio('paybycash')">🔊</button></p>
+      <p>I will pay by card<button onclick="playAudio('paybycard')">🔊</button></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn English Online</p>
+  </footer>
+
+  <!-- Audio Files -->
+  <audio id="howmuch" src="audio/howmuch.mp3"></audio>
+  <audio id="iwanttobuyashirt" src="audio/iwanttobuyashirt.mp3"></audio>
+  <audio id="doyouhavethis" src="audio/doyouhavethis.mp3"></audio>
+  <audio id="canitrythison" src="audio/canitrythison.mp3"></audio>
+  <audio id="thankyou" src="audio/thankyou.mp3"></audio>
+  <audio id="youreWelcome" src="audio/youreWelcome.mp3"></audio>
+  <audio id="paybycash" src="audio/paybycash.mp3"></audio>
+  <audio id="paybycard" src="audio/paybycard.mp3"></audio>
+  
+ 
+
+  <script>
+    function playAudio(id) {
+      document.getElementById(id).play();
+    }
+  </script>
+</body>
+</html>

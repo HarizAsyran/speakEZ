@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English - Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Test Your Conversation Skills!</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="topic.html">Learn</a>
+            <a href="activity.html">Activity</a>
+            <a href="video.html">Video</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mini Quiz - Daily Activities</h2>
+            <form id="quizForm">
+                <div>
+                    <p>1. What do you usually do first in the morning?</p>
+                    <input type="radio" name="q1" value="a"> Eat lunch<br>
+                    <input type="radio" name="q1" value="b"> Wake up<br>
+                    <input type="radio" name="q1" value="c"> Watch a movie<br>
+                </div>
+
+                <div>
+                    <p>2. What do you use to clean your teeth?</p>
+                    <input type="radio" name="q2" value="a"> Toothbrush <br>
+                    <input type="radio" name="q2" value="b"> Spoon<br>
+                    <input type="radio" name="q2" value="c"> Phone<br>
+                </div>
+
+                <div>
+                    <p>3. What do you usually eat in the morning?</p>
+                    <input type="radio" name="q3" value="a"> Breakfast<br>
+                    <input type="radio" name="q3" value="b"> Dinner<br>
+                    <input type="radio" name="q3" value="c"> Ice cream<br>
+                </div>
+
+                <div>
+                    <p>4. What do you say for going to school?</p>
+                    <input type="radio" name="q4" value="a">  I fly away<br>
+                    <input type="radio" name="q4" value="b">  I go to school<br>
+                    <input type="radio" name="q4" value="c">  I run home
+                    <br>
+                </div>
+
+                <div>
+                    <p>5. What is a fun thing to do in the evening?</p>
+                    <input type="radio" name="q5" value="a"> Play  <br>
+                    <input type="radio" name="q5" value="b"> Cry<br>
+                    <input type="radio" name="q5" value="c"> Sleep<br>
+                </div>
+
+                <div>
+                    <p>6. What time do people usually sleep?</p>
+                    <input type="radio" name="q6" value="a">  10 PM <br>
+                    <input type="radio" name="q6" value="b">  3 PM<br>
+                    <input type="radio" name="q6" value="c"> 12 noon<br>
+                </div>
+
+                <br>
+                <button type="button" onclick="checkAnswers()">Submit Answers</button>
+            </form>
+
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn English Online</p>
+    </footer>
+
+    <script>
+    function checkAnswers() {
+        let score = 0;
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "a",
+            q4: "b",
+            q5: "a",
+            q6: "a"
+        };
+        
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            if (selected && selected.value === answers[q]) {
+                score++;
+            }
+        }
+        
+        const result = document.getElementById('result');
+        result.innerHTML = `<h3>You got ${score}/6 correct!</h3>`;
+
+        if (score === 6) {
+            result.innerHTML += "<p>Excellent! 🎉</p>";
+        } else if (score >= 3) {
+            result.innerHTML += "<p>Good job! Keep practicing! 👍</p>";
+        } else {
+            result.innerHTML += "<p>Don't worry, try again! 💪</p>";
+        }
+    }
+    </script>
+</body>
+</html>
